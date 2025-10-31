@@ -25,4 +25,4 @@ dist-ssr
 *.sw?
 
 # nanobanana output
-/nanobanana-output/
+/nanobanana-output/.ipynb_checkpoints/

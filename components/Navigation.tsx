@@ -10,7 +10,7 @@ interface NavigationProps {
 
 const Navigation: React.FC<NavigationProps> = ({ activeTab, setActiveTab }) => {
     return (
-        <nav className="mb-8 overflow-x-auto md:overflow-visible">
+        <nav className="mb-4 overflow-x-auto md:overflow-visible">
             <ul className="flex justify-center border-b border-gray-300 dark:border-gray-700">
                 {TABS.map(tab => (
                     <li key={tab} className="-mb-px">

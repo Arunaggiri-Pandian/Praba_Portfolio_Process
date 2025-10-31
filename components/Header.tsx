@@ -11,12 +11,12 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({ personalInfo, isDarkMode, toggleTheme }) => {
     return (
-        <header className="relative flex flex-col md:flex-row items-center justify-center text-center md:text-left mb-8">
+        <header className="relative flex flex-col md:flex-row items-center justify-center text-center md:text-left mb-4">
             <div className="flex flex-col md:flex-row items-center">
                 <img
                     src="/profile.png"
                     alt={personalInfo.name}
-                    className="w-36 h-36 rounded-full mb-4 md:mb-0 md:mr-8 border-4 border-light-accent dark:border-dark-accent"
+                    className="w-36 h-36 rounded-full mb-4 md:mb-0 md:mr-8 transition-all duration-300 hover:border-4 hover:border-light-accent dark:hover:border-dark-accent"
                 />
                 <div>
                     <h1 className="text-4xl font-bold">{personalInfo.name}</h1>

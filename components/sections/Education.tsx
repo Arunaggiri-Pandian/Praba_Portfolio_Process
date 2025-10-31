@@ -9,7 +9,7 @@ const EducationCard: React.FC<{ item: EducationType }> = ({ item }) => {
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     return (
-        <div className="mb-6 p-6 bg-light-card dark:bg-dark-card rounded-lg shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-teal-500/10">
+        <div className="mb-6 p-6 bg-light-card dark:bg-dark-card rounded-lg shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-light-accent/40 dark:hover:shadow-dark-accent/20">
             <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6">
                 {item.logo && (
                     <div className="flex-shrink-0 w-36 h-24 flex items-center justify-center bg-white rounded-md p-2 shadow-md">
@@ -27,11 +27,16 @@ const EducationCard: React.FC<{ item: EducationType }> = ({ item }) => {
                     </div>
                     
                     {item.details.length > 0 && (
-                        <ul className="list-disc list-outside ml-5 mt-2 space-y-2 text-gray-600 dark:text-gray-400 text-sm">
-                            {item.details.map((detail, index) => (
-                                <li key={index}>{detail}</li>
-                            ))}
-                        </ul>
+                        <div className="mt-4">
+                            <h4 className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">Relevant Coursework</h4>
+                            <div className="flex flex-wrap gap-2">
+                                {item.details.map((detail, index) => (
+                                    <span key={index} className="bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-300 text-xs font-medium px-2.5 py-1 rounded-full">
+                                        {detail}
+                                    </span>
+                                ))}
+                            </div>
+                        </div>
                     )}
 
                     {item.certificate && (
