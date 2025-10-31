@@ -1,0 +1,5 @@
+{
+  "name": "Prabalakshmi_Portfolio",
+  "description": "An interactive portfolio web application built with React and Tailwind CSS, generated from a resume. It features different sections as tabs and a dark/light mode toggle.",
+  "requestFramePermissions": []
+}
