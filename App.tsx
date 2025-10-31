@@ -10,13 +10,22 @@ import Education from './components/sections/Education';
 import Projects from './components/sections/Projects';
 import Skills from './components/sections/Skills';
 import Publications from './components/sections/Publications';
+import PasswordProtect from './components/PasswordProtect';
 
 const App: React.FC = () => {
   const [isDarkMode, setIsDarkMode] = useState(true);
   const [activeTab, setActiveTab] = useState<Tab>('Home');
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
 
   useEffect(() => {
     document.documentElement.classList.add('dark');
+  }, []);
+
+  useEffect(() => {
+    // Bypass authentication if password protection is not enabled in .env
+    if (import.meta.env.VITE_PASSWORD_PROTECT !== 'true') {
+      setIsAuthenticated(true);
+    }
   }, []);
 
   const toggleTheme = () => {
@@ -86,6 +95,10 @@ const App: React.FC = () => {
         return null;
     }
   };
+
+  if (!isAuthenticated) {
+    return <PasswordProtect onAuthenticate={() => setIsAuthenticated(true)} isDarkMode={isDarkMode} toggleTheme={toggleTheme} />;
+  }
 
   return (
     <div className="text-light-text dark:text-dark-text min-h-screen font-sans">

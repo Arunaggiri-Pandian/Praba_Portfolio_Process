@@ -31,6 +31,33 @@ Follow these instructions to get a local copy up and running.
 
 The application will be available at `http://localhost:8501`.
 
+## Configuration
+
+This portfolio includes an optional password protection feature.
+
+### Setting the Password
+
+To set your own password, create or edit the `.env.local` file in the root of the project and add the following line:
+
+```
+VITE_PORTFOLIO_PASSWORD=your_secure_password_here
+```
+
+### Enabling/Disabling Password Protection
+
+You can turn the password protection on or off by editing the `VITE_PASSWORD_PROTECT` variable in the `.env.local` file.
+
+-   **To enable password protection:**
+    ```
+    VITE_PASSWORD_PROTECT=true
+    ```
+-   **To disable password protection:**
+    ```
+    VITE_PASSWORD_PROTECT=false
+    ```
+
+> **Note:** After changing any environment variables in the `.env.local` file, you must restart the development server for the changes to take effect.
+
 ## Directory Structure
 
 ```
