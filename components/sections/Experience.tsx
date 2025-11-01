@@ -13,7 +13,7 @@ const Experience: React.FC<ExperienceProps> = ({ experience, allSkills, extractT
         {experience.map((exp, index) => {
             const technologies = extractTechnologies(exp.description, allSkills);
             return (
-                <div key={index} className="bg-light-card dark:bg-dark-card p-6 rounded-lg shadow-lg dark:shadow-black/50 hover:shadow-2xl hover:shadow-gray-500/40 dark:hover:shadow-dark-accent/20 hover:-translate-y-1 transition-transform-shadow duration-300">
+                <div key={index} className="bg-light-card dark:bg-dark-card p-6 rounded-lg shadow-lg dark:shadow-black/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-light-accent/40 dark:hover:shadow-dark-accent/10">
                     <div className="flex flex-col sm:flex-row justify-between sm:items-start mb-4">
                         <div>
                             <h3 className="text-xl font-bold text-light-text dark:text-dark-text">{exp.role}</h3>

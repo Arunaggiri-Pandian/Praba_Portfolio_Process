@@ -7,7 +7,7 @@ interface PublicationsProps {
 
 const PublicationCard: React.FC<{ item: Publication }> = ({ item }) => {
     return (
-        <div className="mb-6 p-4 bg-light-card dark:bg-dark-card rounded-lg shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-teal-500/10">
+        <div className="mb-6 p-4 bg-light-card dark:bg-dark-card rounded-lg shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-light-accent/40 dark:hover:shadow-dark-accent/10">
             <p className="text-sm text-gray-600 dark:text-gray-400">
                 {item.authors.map((author, index) => (
                     <span key={index} className={author.includes('Prabalakshmi Arumugam') ? 'font-bold text-light-text dark:text-dark-text' : ''}>
