@@ -7,7 +7,7 @@ interface InterestsProps {
 
 const InterestCard: React.FC<{ interest: Interest }> = ({ interest }) => (
     <div className="group h-56 w-full [perspective:1000px]">
-        <div className="relative h-full w-full rounded-lg shadow-lg transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] group-hover:shadow-xl group-hover:shadow-light-accent/40 dark:group-hover:shadow-dark-accent/20">
+        <div className="relative h-full w-full rounded-lg shadow-lg transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] group-hover:shadow-xl group-hover:shadow-light-accent/40 dark:group-hover:shadow-dark-accent/10">
             {/* Front Face */}
             <div className="absolute inset-0 [backface-visibility:hidden]">
                 <div className="rounded-lg shadow-lg overflow-hidden h-full bg-light-card dark:bg-dark-card flex flex-col items-center justify-center p-4">

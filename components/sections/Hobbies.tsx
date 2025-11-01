@@ -8,7 +8,7 @@ interface HobbiesProps {
 
 const HobbyCard: React.FC<{ icon: string; title: string }> = ({ icon, title }) => (
   <div className="flex flex-col items-center justify-center p-6 group">
-    <div className="w-32 h-32 rounded-full overflow-hidden shadow-lg transition-all duration-300 group-hover:shadow-xl group-hover:shadow-light-accent/40 dark:group-hover:shadow-dark-accent/20 group-hover:-translate-y-1">
+    <div className="w-32 h-32 rounded-full overflow-hidden shadow-lg transition-all duration-300 group-hover:shadow-xl group-hover:shadow-light-accent/40 dark:group-hover:shadow-dark-accent/10 group-hover:-translate-y-1">
       <img 
         src={icon} 
         alt={title} 

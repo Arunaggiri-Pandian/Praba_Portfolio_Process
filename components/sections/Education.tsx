@@ -9,7 +9,7 @@ const EducationCard: React.FC<{ item: EducationType }> = ({ item }) => {
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     return (
-        <div className="mb-6 p-6 bg-light-card dark:bg-dark-card rounded-lg shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-light-accent/40 dark:hover:shadow-dark-accent/20">
+        <div className="mb-6 p-6 bg-light-card dark:bg-dark-card rounded-lg shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-light-accent/40 dark:hover:shadow-dark-accent/10">
             <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6">
                 {item.logo && (
                     <div className="flex-shrink-0 w-36 h-24 flex items-center justify-center bg-white rounded-md p-2 shadow-md">
