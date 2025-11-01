@@ -54,6 +54,12 @@ export interface Interest {
   description: string;
 }
 
+export interface Hobby {
+  title: string;
+  icon: string;
+  mindset: string;
+}
+
 export interface ResumeData {
   personalInfo: PersonalInfo;
   education: Education[];
@@ -62,4 +68,5 @@ export interface ResumeData {
   projects: Project[];
   publications: Publication[];
   interests: Interest[];
+  hobbies: Hobby[];
 }

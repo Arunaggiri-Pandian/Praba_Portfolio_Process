@@ -158,5 +158,17 @@ export const RESUME_DATA: ResumeData = {
       icon: '/dram-icon.png',
       description: "Exploring architectures that challenge the traditional separation of memory and compute is a key interest. My project on a DRAM-based in-memory accelerator was a fascinating dive into how near-data processing can overcome performance bottlenecks for emerging AI workloads."
     }
+  ],
+  hobbies: [
+    { title: 'Vibe Coding', icon: '/hobbies/vibe-coding.png', mindset: 'Driven by Curiosity' },
+    { title: 'Weight Training', icon: '/hobbies/weight-training.png', mindset: 'Built by Discipline' },
+    { title: 'Running', icon: '/hobbies/running.png', mindset: 'Powered by Endurance' },
+    { title: 'Pickleball', icon: '/hobbies/pickleball.png', mindset: 'Fueled by Energy' },
+    { title: 'Tennis', icon: '/hobbies/tennis.png', mindset: 'Inspired by Strategy' },
+    { title: 'Cooking', icon: '/hobbies/cooking.png', mindset: 'Crafted with Creativity' },
+    { title: 'Travel', icon: '/hobbies/travel.png', mindset: 'Shaped by Cultures' },
+    { title: 'Movie Fanatic', icon: '/hobbies/movie-fanatic.png', mindset: 'Inspired by Stories' },
+    { title: 'Entrepreneurial Chai Time', icon: '/hobbies/chai-time.png', mindset: 'Enriched by Connection' },
+    { title: 'Seeking New Challenges', icon: '/hobbies/seeking-challenges.png', mindset: 'Defined by Growth' },
   ]
 };

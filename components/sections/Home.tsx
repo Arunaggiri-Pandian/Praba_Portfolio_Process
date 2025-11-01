@@ -1,6 +1,7 @@
 import React from 'react';
 import { RESUME_DATA } from '../../constants';
 import Interests from './Interests';
+import Hobbies from './Hobbies';
 
 const Home: React.FC = () => {
   return (
@@ -18,6 +19,7 @@ const Home: React.FC = () => {
         </p>
       </section>
       <Interests interests={RESUME_DATA.interests} />
+      <Hobbies hobbies={RESUME_DATA.hobbies} />
     </>
   );
 };
