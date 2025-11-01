@@ -7,7 +7,7 @@ const Home: React.FC = () => {
   return (
     <>
       <section className="animate-fade-in bg-light-card dark:bg-dark-card p-8 rounded-lg shadow-lg dark:shadow-black/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-light-accent/40 dark:hover:shadow-dark-accent/20">
-        <h2 className="text-2xl font-bold mb-4">About Me</h2>
+        <h2 className="text-2xl font-bold mb-4 text-center">About Me</h2>
         <p className="mb-4">
           I am a highly motivated and results-oriented engineer with a Master's degree in Electrical and Computer Engineering from Boise State University. My academic background and professional experience have provided me with a strong foundation in both software development and hardware design.
         </p>

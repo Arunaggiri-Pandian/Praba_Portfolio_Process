@@ -157,6 +157,11 @@ export const RESUME_DATA: ResumeData = {
       title: 'Next-Generation Memory Architectures',
       icon: '/dram-icon.png',
       description: "Exploring architectures that challenge the traditional separation of memory and compute is a key interest. My project on a DRAM-based in-memory accelerator was a fascinating dive into how near-data processing can overcome performance bottlenecks for emerging AI workloads."
+    },
+    {
+      title: 'Physical Design & VLSI',
+      icon: '/physical-design-icon.png',
+      description: "I have a strong interest in the complete chip design flow, from RTL to GDSII. I am passionate about the challenges of floorplanning, routing, and timing closure to create efficient and robust integrated circuits."
     }
   ],
   hobbies: [
