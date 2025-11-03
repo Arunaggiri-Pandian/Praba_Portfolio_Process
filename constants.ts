@@ -67,6 +67,7 @@ export const RESUME_DATA: ResumeData = {
       role: 'Software Engineer',
       dates: 'Aug 2022 – Dec 2024',
       location: 'Bengaluru, India',
+      logo: '/dish_Networks_Logo.png',
       description: [
         'Developed and optimized backend services for Sling streaming platform using Python, Django and MSSQL, implementing advanced SQL tuning to reduce server response time by 25%.',
         'Designed RESTful APIs and GraphQL endpoints, cutting API latency by 20% and validating performance with Postman.',
@@ -78,6 +79,7 @@ export const RESUME_DATA: ResumeData = {
       role: 'Physical Failure Analysis Intern',
       dates: 'Feb 2022 – Jul 2022',
       location: 'Hosur, India',
+      logo: '/Delta_Electronics_Logo.png',
       description: [
         'Performed root cause analysis on failed Variable Frequency drive (VFD) PCBs using advanced microscopy and electrical probing, identifying defects such as solder joint fractures, trace burns, and component failures.',
         'Prepared detailed failure reports linking defect characteristics to potential process or material issues, enabling targeted corrective actions by manufacturing quality teams.',
