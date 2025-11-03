@@ -2,6 +2,23 @@
 
 This repository contains the source code for the personal portfolio website of Prabalakshmi Arumugam.
 
+## Tech Stack
+
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+*   Powers the dynamic, component-based user interface, allowing for a modular and maintainable codebase.
+
+![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
+*   Provides static typing for the entire project, ensuring code quality, preventing common bugs, and improving developer experience.
+
+![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)
+*   Serves as the high-performance build tool and development server, offering near-instant hot-reloading and optimized builds.
+
+![Framer Motion](https://img.shields.io/badge/Framer-black?style=for-the-badge&logo=framer&logoColor=blue)
+*   Used to create smooth, declarative animations and micro-interactions that enhance the user experience.
+
+![React Slick](https://img.shields.io/badge/React_Slick-FFFFFF?style=for-the-badge&logo=react&logoColor=black)
+*   A carousel component built with React, used for creating interactive and swipeable content sliders.
+
 ## Getting Started
 
 Follow these instructions to get a local copy up and running.
