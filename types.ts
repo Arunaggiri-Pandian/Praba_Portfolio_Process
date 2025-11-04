@@ -36,6 +36,7 @@ export interface Project {
   technologies: string;
   date: string;
   description: string[];
+  image?: string;
 }
 
 export interface Publication {
