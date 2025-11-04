@@ -6,8 +6,8 @@ import Hobbies from './Hobbies';
 const Home: React.FC = () => {
   return (
     <>
+      <h2 className="text-2xl font-bold mb-6">About Me</h2>
       <section className="animate-fade-in bg-light-card dark:bg-dark-card p-8 rounded-lg shadow-lg dark:shadow-black/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-light-accent/40 dark:hover:shadow-dark-accent/10">
-        <h2 className="text-2xl font-bold mb-4">About Me</h2>
         <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
           <div className="flex-shrink-0 flex flex-col items-center">
             <img
