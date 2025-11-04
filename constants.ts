@@ -48,7 +48,7 @@ export const RESUME_DATA: ResumeData = {
       'Xilinx Vivado',
       'COMSOL',
     ],
-    'AI/ML and Software Development': [
+    'AI/ML': [
       'PyTorch',
       'TensorFlow',
       'Scikit-learn',
@@ -57,9 +57,8 @@ export const RESUME_DATA: ResumeData = {
       'Matplotlib',
       'Seaborn',
       'Plotly',
-      'Git',
-      'Linux',
     ],
+    'Software Development': ['React', 'Streamlit', 'PostgreSQL', 'MySQL', 'MongoDB', 'Git', 'Linux'],
   },
   experience: [
     {
