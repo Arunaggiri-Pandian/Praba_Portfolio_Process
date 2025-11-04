@@ -66,7 +66,10 @@ export interface ResumeData {
   education: Education[];
   skills: Skills;
   experience: Experience[];
-  projects: Project[];
+  projects: {
+    graduate: Project[];
+    undergraduate: Project[];
+  };
   publications: Publication[];
   interests: Interest[];
   hobbies: Hobby[];

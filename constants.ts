@@ -135,62 +135,66 @@ export const RESUME_DATA: ResumeData = {
       ],
     },
   ],
-  projects: [
-    {
-      title: 'Low-Noise Neural Amplifier Design',
-      technologies: 'Cadence Virtuoso',
-      date: 'Spring 2025',
-      description: [
-        'Designed a folded Cascode neural amplifier (less than 1 microWatt power, microvolt-level signal amplification) using gm/ID methodology; achieved 47 V/V gain and 7 kHz bandwidth.',
-        'Executed TT/SS/FF corner, Monte Carlo, and noise simulations to assess PVT robustness, mismatch effects, and minimize input-referred noise with thick oxide devices.',
-        'Validated performance via AC, transient, and noise analyses in Spectre; documented gain, phase margin, and integrated noise for final design sign-off.',
-      ],
-      image: '/projects/neural_amplifier.png',
-    },
-    {
-      title: 'DRAM-Based In-Memory ALU Accelerator',
-      technologies: 'Verilog, Yosys',
-      date: 'Spring 2025',
-      description: [
-        'Engineered a custom 8-bit ALU (addition and multiplication) in Verilog, synthesized with Yosys, and integrated at the DRAM column decoder for near-data processing.',
-        'Enabled 64-way parallelism (8 banks × 8 subarrays), achieving 546 GigaOps per second throughput with only 0.4% area overhead at 130nm, and benchmarked timing (tRCD, tCAS), power (12.5 microW per ALU), and energy (125–250 fJ/op), demonstrating scalability for embedded AI.',
-      ],
-      image: '/projects/dram_alu.png',
-    },
-    {
-      title: 'AXI-Based PWM Module Design and Verification',
-      technologies: 'Verilog, SystemVerilog, ModelSim, Yosys',
-      date: 'Summer 2025',
-      description: [
-        'Designed an AXI4-Lite register-mapped PWM peripheral in SystemVerilog, supporting programmable period, duty cycle, and enable/disable control, and integrated for SoC-level readiness.',
-        'Developed a self-checking UVM/SystemVerilog testbench with assertions, functional coverage, and protocol checks for AXI handshakes; validated functionality via GTKWave waveform analysis and protocol compliance.',
-        'Synthesized the design with Yosys using FPGA flow, generated area/utilization reports (LUTs, FFs).',
-      ],
-      image: '/projects/axi_pwm.png',
-    },
-    {
-      title: 'Fraudless Fuelling',
-      technologies: 'Embedded Systems, Ultrasonic Sensors, Arduino',
-      date: 'Oct 2019 - Feb 2021',
-      description: [
-        'Modelled a device to prevent fuel fraud at petrol pumps by accurately measuring the fuel being filled.',
-        'The device allows for cross-verification with the pump\'s digital meter to detect discrepancies.',
-        'Aims to provide a clear and immediate alert if the measured fuel level does not match the paid amount, preventing deception.',
-      ],
-      image: '/projects/fraudless_fuelling.png',
-    },
-    {
-      title: 'IV - Auto Assist',
-      technologies: 'Embedded Systems, Sensor Technology, Automation',
-      date: 'Feb 2020 - Dec 2020',
-      description: [
-        'Designed a cost-efficient system to monitor IV fluid levels and alert hospital staff when the saline bottle is nearly empty.',
-        'Incorporated an autonomous mechanism to automatically stop fluid flow, preventing blood backflow when the bottle is empty.',
-        'Eliminates the need for continuous manual monitoring, allowing healthcare staff to manage multiple patients more efficiently and safely.',
-      ],
-      image: '/projects/iv_auto_assist.png',
-    },
-  ],
+  projects: {
+    graduate: [
+      {
+        title: 'Low-Noise Neural Amplifier Design',
+        technologies: 'Cadence Virtuoso',
+        date: 'Spring 2025',
+        description: [
+          'Designed a folded Cascode neural amplifier (less than 1 microWatt power, microvolt-level signal amplification) using gm/ID methodology; achieved 47 V/V gain and 7 kHz bandwidth.',
+          'Executed TT/SS/FF corner, Monte Carlo, and noise simulations to assess PVT robustness, mismatch effects, and minimize input-referred noise with thick oxide devices.',
+          'Validated performance via AC, transient, and noise analyses in Spectre; documented gain, phase margin, and integrated noise for final design sign-off.',
+        ],
+        image: '/projects/neural_amplifier.png',
+      },
+      {
+        title: 'DRAM-Based In-Memory ALU Accelerator',
+        technologies: 'Verilog, Yosys',
+        date: 'Spring 2025',
+        description: [
+          'Engineered a custom 8-bit ALU (addition and multiplication) in Verilog, synthesized with Yosys, and integrated at the DRAM column decoder for near-data processing.',
+          'Enabled 64-way parallelism (8 banks × 8 subarrays), achieving 546 GigaOps per second throughput with only 0.4% area overhead at 130nm, and benchmarked timing (tRCD, tCAS), power (12.5 microW per ALU), and energy (125–250 fJ/op), demonstrating scalability for embedded AI.',
+        ],
+        image: '/projects/dram_alu.png',
+      },
+      {
+        title: 'AXI-Based PWM Module Design and Verification',
+        technologies: 'Verilog, SystemVerilog, ModelSim, Yosys',
+        date: 'Summer 2025',
+        description: [
+          'Designed an AXI4-Lite register-mapped PWM peripheral in SystemVerilog, supporting programmable period, duty cycle, and enable/disable control, and integrated for SoC-level readiness.',
+          'Developed a self-checking UVM/SystemVerilog testbench with assertions, functional coverage, and protocol checks for AXI handshakes; validated functionality via GTKWave waveform analysis and protocol compliance.',
+          'Synthesized the design with Yosys using FPGA flow, generated area/utilization reports (LUTs, FFs).',
+        ],
+        image: '/projects/axi_pwm.png',
+      },
+    ],
+    undergraduate: [
+      {
+        title: 'Fraudless Fuelling',
+        technologies: 'Embedded Systems, Ultrasonic Sensors, Arduino',
+        date: 'Oct 2019 - Feb 2021',
+        description: [
+          'Modelled a device to prevent fuel fraud at petrol pumps by accurately measuring the fuel being filled.',
+          'The device allows for cross-verification with the pump\'s digital meter to detect discrepancies.',
+          'Aims to provide a clear and immediate alert if the measured fuel level does not match the paid amount, preventing deception.',
+        ],
+        image: '/projects/fraudless_fuelling.png',
+      },
+      {
+        title: 'IV - Auto Assist',
+        technologies: 'Embedded Systems, Sensor Technology, Automation',
+        date: 'Feb 2020 - Dec 2020',
+        description: [
+          'Designed a cost-efficient system to monitor IV fluid levels and alert hospital staff when the saline bottle is nearly empty.',
+          'Incorporated an autonomous mechanism to automatically stop fluid flow, preventing blood backflow when the bottle is empty.',
+          'Eliminates the need for continuous manual monitoring, allowing healthcare staff to manage multiple patients more efficiently and safely.',
+        ],
+        image: '/projects/iv_auto_assist.png',
+      },
+    ],
+  },
   publications: [
     {
       authors: ['Sai Kumar T S', 'Prabalakshmi A', 'Arunaggiri Pandian K.', 'Alagammal S.'],

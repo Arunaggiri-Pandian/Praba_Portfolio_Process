@@ -48,7 +48,7 @@ const Hobbies: React.FC<HobbiesProps> = ({ hobbies }) => {
 
     return (
         <section className="mt-12">
-            <h2 className="text-2xl font-bold mb-6 text-center">Outside the Circuit</h2>
+            <h2 className="text-2xl font-bold mb-6">Outside the Circuit</h2>
             <Slider {...carouselSettings}>
                 {hobbies.map((hobby, index) => (
                     <div key={hobby.title}>
