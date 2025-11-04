@@ -63,6 +63,54 @@ export const RESUME_DATA: ResumeData = {
   },
   experience: [
     {
+      company: 'Boise State University',
+      role: 'Graduate Teaching Assistant',
+      dates: 'Aug 2025 – Present',
+      location: 'Boise, ID',
+      logo: '/Boise_State_University_logo.jpeg',
+      description: [
+        'Supported ECE/CSE 180: Introduction to Electrical and Computer Engineering, a first-year gateway course focused on building foundational skills in ECE.',
+        'Guided students through basic circuit design, embedded systems, and programming fundamentals via hands-on labs using Arduino microcontrollers.',
+        'Facilitated group discussions on ECE subfields, strategies for success in STEM, and the use of essential engineering tools and platforms.',
+        'Helped foster a collaborative and inclusive environment, encouraging curiosity and a strong sense of community among incoming students.',
+      ],
+    },
+    {
+      company: 'Boise State University',
+      role: 'Grader',
+      dates: 'Aug 2025 – Present',
+      location: 'Boise, ID',
+      logo: '/Boise_State_University_logo.jpeg',
+      description: [
+        'Assisted Prof. Andres Valdepana by grading homework and lab assignments for ECE 472 Power Electronics.',
+        'Provided constructive feedback to support student learning.',
+      ],
+    },
+    {
+      company: 'Boise State University',
+      role: 'Graduate Teaching Assistant',
+      dates: 'Jan 2025 – May 2025',
+      location: 'Boise, ID',
+      logo: '/Boise_State_University_logo.jpeg',
+      description: [
+        'Supported instruction for ECE 330: Audio Signal Processing, assisting Dr. Neal Bangerter during lab sessions.',
+        'Facilitated student learning through weekly office hours and one-on-one guidance.',
+        'Evaluated and graded assignments and lab reports, providing constructive, detailed feedback to help students improve.',
+        'Helped undergraduate students understand core concepts in audio signal processing, including Fourier Transforms, spectral analysis, and frequency domain filtering.',
+      ],
+    },
+    {
+      company: 'Boise State University',
+      role: 'Grader',
+      dates: 'Jan 2025 – May 2025',
+      location: 'Boise, ID',
+      logo: '/Boise_State_University_logo.jpeg',
+      description: [
+        'Assisted Prof. Andres Valdepana by grading homework and lab assignments for Smart Grid and Renewable Energy Resources.',
+        'Provided constructive feedback to support student learning.',
+      ],
+    },
+    {
       company: 'Dish Network Technologies',
       role: 'Software Engineer',
       dates: 'Aug 2022 – Dec 2024',
