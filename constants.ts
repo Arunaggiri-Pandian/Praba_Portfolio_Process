@@ -170,12 +170,12 @@ export const RESUME_DATA: ResumeData = {
       },
       {
         title: 'AXI-Based PWM Module Design and Verification',
-        technologies: 'Verilog, SystemVerilog, ModelSim, Yosys',
+        technologies: 'Verilog, Xilinx Vivado',
         date: 'Summer 2025',
         description: [
-          'Designed an AXI4-Lite register-mapped PWM peripheral in SystemVerilog, supporting programmable period, duty cycle, and enable/disable control, and integrated for SoC-level readiness.',
-          'Developed a self-checking UVM/SystemVerilog testbench with assertions, functional coverage, and protocol checks for AXI handshakes; validated functionality via GTKWave waveform analysis and protocol compliance.',
-          'Synthesized the design with Yosys using FPGA flow, generated area/utilization reports (LUTs, FFs).',
+          'Designed an AXI4-Lite register-mapped PWM peripheral in Verilog, supporting programmable period, duty cycle, and enable/disable control, and integrated for SoC-level readiness.',
+          'Developed a self-checking testbench with assertions and functional coverage for AXI handshakes; validated functionality via waveform analysis and protocol compliance.',
+          'Synthesized the design with Xilinx Vivado using an FPGA flow, generated area/utilization reports (LUTs, FFs).',
         ],
         image: '/projects/axi_pwm.png',
       },
