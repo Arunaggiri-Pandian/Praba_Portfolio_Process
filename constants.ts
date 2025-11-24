@@ -145,7 +145,7 @@ export const RESUME_DATA: ResumeData = {
           'Managed the complete RTL-to-bitstream flow in Xilinx Vivado, including synthesis, implementation, and writing .XDC constraint files for the Zybo board, and verified with a command-driven testbench.',
           'Analyzed synthesis reports to compare FSM encoding styles for resource usage (LUTs vs. FFs) and implemented on Zybo.',
         ],
-        image: '/projects/soda_vending_machine.png',
+        image: '/projects/fpga_vending_machine_controller.png',
       },
       {
         title: 'Low-Noise Neural Amplifier Design',
