@@ -137,6 +137,17 @@ export const RESUME_DATA: ResumeData = {
   projects: {
     graduate: [
       {
+        title: 'FPGA-Based Vending Machine Controller',
+        technologies: 'Verilog, Xilinx Vivado',
+        date: 'Fall 2025',
+        description: [
+          'Designed a soda vending machine in Verilog using a Finite State Machine (FSM) controller and a custom datapath (adders, comparators) for logic operations.',
+          'Managed the complete RTL-to-bitstream flow in Xilinx Vivado, including synthesis, implementation, and writing .XDC constraint files for the Zybo board, and verified with a command-driven testbench.',
+          'Analyzed synthesis reports to compare FSM encoding styles for resource usage (LUTs vs. FFs) and implemented on Zybo.',
+        ],
+        image: '/projects/soda_vending_machine.png',
+      },
+      {
         title: 'Low-Noise Neural Amplifier Design',
         technologies: 'Cadence Virtuoso',
         date: 'Spring 2025',
