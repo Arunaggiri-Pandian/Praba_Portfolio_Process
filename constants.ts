@@ -3,7 +3,7 @@ import type { ResumeData } from './types';
 export const RESUME_DATA: ResumeData = {
   personalInfo: {
     name: 'Prabalakshmi Arumugam',
-    location: 'Boise, ID',
+    location: 'Boise, Idaho',
     phone: '+1 208-550-6649',
     email: 'prabaarumugam@u.boisestate.edu',
     linkedin: 'https://linkedin.com/in/prabalakshmi',
@@ -251,6 +251,11 @@ export const RESUME_DATA: ResumeData = {
       title: 'Physical Design & VLSI',
       icon: '/physical-design-icon.png',
       description: "I have a strong interest in the complete chip design flow, from RTL to GDSII. I am passionate about the challenges of floorplanning, routing, and timing closure to create efficient and robust integrated circuits."
+    },
+    {
+      title: 'Embedded Systems & IoT',
+      icon: '/iot-icon.png',
+      description: "I enjoy building intelligent devices that interact with the physical world. My focus is on designing and programming microcontrollers for IoT applications, creating efficient and reliable systems that bridge the gap between hardware and software."
     }
   ],
   hobbies: [

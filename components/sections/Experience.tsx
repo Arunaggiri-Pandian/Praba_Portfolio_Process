@@ -48,7 +48,7 @@ const Experience: React.FC<ExperienceProps> = ({ experience, allSkills, extractT
                                                 <p className="text-sm text-light-accent dark:text-dark-accent font-mono mt-1 sm:mt-0 whitespace-nowrap">{role.dates}</p>
                                             </div>
 
-                                            {technologies.length > 0 && (
+                                            {technologies.length > 0 && group.company !== 'Dish Network Technologies' && (
                                                 <div className="mb-4">
                                                     <h5 className="text-sm font-semibold text-gray-500 dark:text-gray-400 mb-2">Key Technologies</h5>
                                                     <div className="flex flex-wrap gap-2">

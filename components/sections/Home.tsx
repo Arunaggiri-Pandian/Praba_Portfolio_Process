@@ -2,8 +2,31 @@ import React from 'react';
 import { RESUME_DATA } from '../../constants';
 import Interests from './Interests';
 import Hobbies from './Hobbies';
+import type { Tab } from '../Navigation';
 
-const Home: React.FC = () => {
+const ViewAllButton: React.FC<{ onClick: () => void; children: React.ReactNode }> = ({ onClick, children }) => (
+    <button
+      onClick={onClick}
+      className="mt-4 text-sm font-semibold text-light-accent dark:text-dark-accent hover:text-light-accent/80 dark:hover:text-dark-accent/80 transition-colors duration-300 group"
+    >
+      {children} <span className="transition-transform duration-300 inline-block group-hover:translate-x-1">→</span>
+    </button>
+  );
+
+const Home: React.FC<{ setActiveTab: (tab: Tab) => void }> = ({ setActiveTab }) => {
+    const dishNetworkExperience = RESUME_DATA.experience.find(exp => exp.company === 'Dish Network Technologies');
+    const teachingAssistantExperience = RESUME_DATA.experience.find(exp => exp.role === 'Graduate Teaching Assistant');
+
+    const recentExperiences = [];
+    if (dishNetworkExperience) {
+        recentExperiences.push(dishNetworkExperience);
+    }
+    if (teachingAssistantExperience) {
+        recentExperiences.push(teachingAssistantExperience);
+    }
+
+    const recentProjects = RESUME_DATA.projects.graduate.slice(0, 2);
+
   return (
     <>
       <h2 className="text-2xl font-bold mb-6">About Me</h2>
@@ -15,16 +38,6 @@ const Home: React.FC = () => {
               alt="Prabalakshmi Balasubramani"
               className="rounded-xl w-48 h-56 object-cover shadow-lg border-4 border-gray-200 dark:border-gray-700 transition-all duration-300 ease-in-out hover:scale-105 hover:border-light-accent/70 dark:hover:border-dark-accent/70"
             />
-            <a
-              href="/Prabalakshmi_Arumugam_Resume.pdf"
-              download
-              className="mt-4 inline-flex items-center px-4 py-2 bg-transparent text-light-accent dark:text-dark-accent font-semibold rounded-lg border-2 border-gray-200 dark:border-gray-700 hover:border-light-accent dark:hover:border-dark-accent transition-all duration-300"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
-                <path fillRule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clipRule="evenodd" />
-              </svg>
-              Download Resume
-            </a>
           </div>
           <div className="text-gray-600 dark:text-gray-400 space-y-4 text-justify">
             <p>
@@ -39,10 +52,48 @@ const Home: React.FC = () => {
           </div>
         </div>
       </section>
+
       <Interests interests={RESUME_DATA.interests} />
+
+      <div className="mt-12">
+        <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-6 text-center md:text-left">Recent Activity</h3>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {/* Recent Experience Column */}
+          <div>
+            <h4 className="text-lg font-semibold text-slate-800 dark:text-slate-200 mb-4">Recent Experience</h4>
+            <div className="space-y-4">
+              {recentExperiences.map((role, index) => (
+                <div key={index} className="p-4 bg-slate-100 dark:bg-slate-800/80 rounded-lg shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-light-accent/10 dark:hover:shadow-dark-accent/10">
+                  <h5 className="font-bold text-light-accent dark:text-dark-accent">{role.role}</h5>
+                  <p className="text-sm font-medium text-slate-700 dark:text-slate-300">{role.company}</p>
+                  <p className="text-xs text-slate-500 dark:text-slate-500 mt-1">{role.dates}</p>
+                </div>
+              ))}
+            </div>
+            <ViewAllButton onClick={() => setActiveTab('Experience')}>View All Experience</ViewAllButton>
+          </div>
+
+          {/* Latest Projects Column */}
+          <div>
+            <h4 className="text-lg font-semibold text-slate-800 dark:text-slate-200 mb-4">Latest Projects</h4>
+            <div className="space-y-4">
+              {recentProjects.map((proj, index) => (
+                <div key={index} className="p-4 bg-slate-100 dark:bg-slate-800/80 rounded-lg shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-light-accent/10 dark:hover:shadow-dark-accent/10">
+                  <h5 className="font-bold text-light-accent dark:text-dark-accent truncate">{proj.title}</h5>
+                  <p className="text-sm font-medium text-slate-700 dark:text-slate-300">{proj.technologies}</p>
+                  <p className="text-xs text-slate-500 dark:text-slate-500 mt-1">{proj.date}</p>
+                </div>
+              ))}
+            </div>
+            <ViewAllButton onClick={() => setActiveTab('Projects')}>View All Projects</ViewAllButton>
+          </div>
+        </div>
+      </div>
+
       <Hobbies hobbies={RESUME_DATA.hobbies} />
     </>
   );
 };
+
 
 export default Home;

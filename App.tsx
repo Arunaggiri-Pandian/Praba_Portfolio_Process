@@ -75,7 +75,7 @@ const App: React.FC = () => {
   const renderContent = () => {
     switch (activeTab) {
       case 'Home':
-        return <Home />;
+        return <Home setActiveTab={setActiveTab} />;
       case 'Experience':
         return <Experience 
                   experience={experience} 
@@ -102,7 +102,7 @@ const App: React.FC = () => {
 
   return (
     <div className="text-light-text dark:text-dark-text min-h-screen font-sans">
-      <div className="container mx-auto max-w-5xl px-4 py-8">
+      <div className="container mx-auto p-4 md:p-8">
         
         <Header 
           personalInfo={personalInfo}
@@ -115,11 +115,13 @@ const App: React.FC = () => {
           setActiveTab={setActiveTab}
         />
 
-        <main>
-          {renderContent()}
+        <main className="mt-8">
+          <div key={activeTab} className="mt-8 bg-light-card dark:bg-dark-card/50 rounded-xl p-6 md:p-8 shadow-2xl ring-1 ring-gray-900/5 dark:ring-white/10">
+            {renderContent()}
+          </div>
         </main>
 
-        <footer className="text-center mt-8 pt-8 border-t border-gray-300 dark:border-gray-700 text-sm text-gray-500 dark:text-gray-400">
+        <footer className="text-center mt-8 pt-8 text-sm text-gray-500 dark:text-gray-400">
           © {new Date().getFullYear()} Prabalakshmi Arumugam. All Rights Reserved.
         </footer>
       </div>
