@@ -1,6 +1,7 @@
 import React from 'react';
 import { RESUME_DATA } from '../../constants';
 import Interests from './Interests';
+import FunFact from '../FunFact';
 import Hobbies from './Hobbies';
 import type { Tab } from '../Navigation';
 
@@ -91,6 +92,7 @@ const Home: React.FC<{ setActiveTab: (tab: Tab) => void }> = ({ setActiveTab }) 
       </div>
 
       <Hobbies hobbies={RESUME_DATA.hobbies} />
+      <FunFact />
     </>
   );
 };
