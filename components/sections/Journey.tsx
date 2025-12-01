@@ -126,6 +126,7 @@ const WaferVisual = () => {
 const Journey = () => {
   const [activeStage, setActiveStage] = useState(0);
   const [viewMode, setViewMode] = useState('narrative'); // 'narrative' or 'process'
+  const [revealedStagesCount, setRevealedStagesCount] = useState(1);
 
   const stages = [
     {
@@ -181,6 +182,14 @@ const Journey = () => {
       lithoRelevance: "My graduate studies connected process theory with data analysis, enabling me to use computational tools to define process windows and characterize variability—core skills for a lithography engineer."
     }
   ];
+
+  const handleNextStep = () => {
+    if (revealedStagesCount < stages.length) {
+      const nextStageIndex = revealedStagesCount;
+      setRevealedStagesCount(revealedStagesCount + 1);
+      setActiveStage(nextStageIndex);
+    }
+  };
 
   return (
     <div className="min-h-screen bg-slate-950 text-slate-200 font-sans selection:bg-amber-500/30">
@@ -254,7 +263,7 @@ const Journey = () => {
                 {/* Vertical Line */}
                 <div className="absolute left-6 top-4 bottom-4 w-0.5 bg-slate-800"></div>
 
-                {stages.map((stage, index) => (
+                {stages.slice(0, revealedStagesCount).map((stage, index) => (
                   <button
                     key={stage.id}
                     onClick={() => setActiveStage(index)}
@@ -284,84 +293,98 @@ const Journey = () => {
 
           {/* Right Column: Detail View with Toggle */}
           <div className="lg:col-span-8">
-            <div className="h-full bg-slate-900 border border-slate-800 rounded-2xl p-6 md:p-8 relative overflow-hidden">
+            <div className="h-full bg-slate-900 border border-slate-800 rounded-2xl p-6 md:p-8 relative overflow-hidden flex flex-col">
               
-              {/* Background accent */}
-              <div className={`absolute top-0 right-0 w-64 h-64 bg-${stages[activeStage].color}-500/5 blur-[100px] rounded-full`}></div>
+              <div className="flex-grow">
+                {/* Background accent */}
+                <div className={`absolute top-0 right-0 w-64 h-64 bg-${stages[activeStage].color}-500/5 blur-[100px] rounded-full`}></div>
 
-              {/* Toggle Switch */}
-              <div className="flex justify-between items-start mb-8 relative z-10">
-                <div>
-                  <h2 className="text-2xl font-bold text-white mb-2">{stages[activeStage].title}</h2>
-                  <div className="flex items-center gap-4 text-slate-400 text-sm">
-                    <div className="flex items-center gap-2">
-                      <Zap size={14} className="text-amber-400" />
-                      <span>KPI: {stages[activeStage].kpi}</span>
+                {/* Toggle Switch */}
+                <div className="flex justify-between items-start mb-8 relative z-10">
+                  <div>
+                    <h2 className="text-2xl font-bold text-white mb-2">{stages[activeStage].title}</h2>
+                    <div className="flex items-center gap-4 text-slate-400 text-sm">
+                      <div className="flex items-center gap-2">
+                        <Zap size={14} className="text-amber-400" />
+                        <span>KPI: {stages[activeStage].kpi}</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <Award size={14} className="text-sky-400" />
+                        <span>Competency: {stages[activeStage].keyCompetency}</span>
+                      </div>
                     </div>
-                    <div className="flex items-center gap-2">
-                      <Award size={14} className="text-sky-400" />
-                      <span>Competency: {stages[activeStage].keyCompetency}</span>
-                    </div>
+                  </div>
+
+                  <div className="bg-slate-950 p-1 rounded-lg border border-slate-800 flex text-sm font-medium">
+                    <button 
+                      onClick={() => setViewMode('narrative')}
+                      className={`px-4 py-2 rounded-md transition-all ${
+                        viewMode === 'narrative' 
+                          ? 'bg-slate-800 text-white shadow-sm' 
+                          : 'text-slate-500 hover:text-slate-300'
+                      }`}
+                    >
+                      My Experience
+                    </button>
+                    <button 
+                      onClick={() => setViewMode('process')}
+                      className={`px-4 py-2 rounded-md transition-all flex items-center gap-2 ${
+                        viewMode === 'process' 
+                          ? 'bg-amber-600 text-white shadow-sm' 
+                          : 'text-slate-500 hover:text-slate-300'
+                      }`}
+                    >
+                       <Microscope size={14} />
+                       Litho Lens
+                    </button>
                   </div>
                 </div>
 
-                <div className="bg-slate-950 p-1 rounded-lg border border-slate-800 flex text-sm font-medium">
-                  <button 
-                    onClick={() => setViewMode('narrative')}
-                    className={`px-4 py-2 rounded-md transition-all ${
-                      viewMode === 'narrative' 
-                        ? 'bg-slate-800 text-white shadow-sm' 
-                        : 'text-slate-500 hover:text-slate-300'
-                    }`}
-                  >
-                    My Experience
-                  </button>
-                  <button 
-                    onClick={() => setViewMode('process')}
-                    className={`px-4 py-2 rounded-md transition-all flex items-center gap-2 ${
-                      viewMode === 'process' 
-                        ? 'bg-amber-600 text-white shadow-sm' 
-                        : 'text-slate-500 hover:text-slate-300'
-                    }`}
-                  >
-                     <Microscope size={14} />
-                     Litho Lens
-                  </button>
-                </div>
-              </div>
-
-              {/* Dynamic Content */}
-              <div className="relative min-h-[200px] z-10">
-                <div className={`transition-opacity duration-300 ${viewMode === 'narrative' ? 'opacity-100' : 'opacity-0 absolute inset-0'}`}>
-                   <p className="text-lg text-slate-300 leading-relaxed mb-6">
-                     {stages[activeStage].narrative}
-                   </p>
-                   <div className="p-4 bg-slate-800/50 rounded-lg border border-slate-700">
-                     <h5 className="text-sm font-bold text-slate-400 mb-2 uppercase tracking-wider">What I did</h5>
-                     <div className="flex flex-wrap">
-                        {stages[activeStage].skills.map((skill, i) => (
-                          <Badge key={i} color={stages[activeStage].color}>{skill}</Badge>
-                        ))}
-                     </div>
-                   </div>
-                </div>
-
-                <div className={`transition-opacity duration-300 ${viewMode === 'process' ? 'opacity-100' : 'opacity-0 absolute inset-0'}`}>
-                   <p className="text-lg text-amber-100 leading-relaxed mb-6">
-                     {stages[activeStage].processTranslation}
-                   </p>
-                   <div className="p-4 bg-amber-900/10 rounded-lg border border-amber-900/30">
-                     <div className="flex items-center gap-2 mb-2">
-                        <TrendingUp size={16} className="text-amber-500" />
-                        <h5 className="text-sm font-bold text-amber-500 uppercase tracking-wider">Relevance to Photolithography</h5>
-                     </div>
-                     <p className="text-sm text-slate-400">
-                       {stages[activeStage].lithoRelevance}
+                {/* Dynamic Content */}
+                <div className="relative min-h-[200px] z-10">
+                  <div className={`transition-opacity duration-300 ${viewMode === 'narrative' ? 'opacity-100' : 'opacity-0 absolute inset-0 pointer-events-none'}`}>
+                     <p className="text-lg text-slate-300 leading-relaxed mb-6">
+                       {stages[activeStage].narrative}
                      </p>
-                   </div>
+                     <div className="p-4 bg-slate-800/50 rounded-lg border border-slate-700">
+                       <h5 className="text-sm font-bold text-slate-400 mb-2 uppercase tracking-wider">What I did</h5>
+                       <div className="flex flex-wrap">
+                          {stages[activeStage].skills.map((skill, i) => (
+                            <Badge key={i} color={stages[activeStage].color}>{skill}</Badge>
+                          ))}
+                       </div>
+                     </div>
+                  </div>
+
+                  <div className={`transition-opacity duration-300 ${viewMode === 'process' ? 'opacity-100' : 'opacity-0 absolute inset-0 pointer-events-none'}`}>
+                     <p className="text-lg text-amber-100 leading-relaxed mb-6">
+                       {stages[activeStage].processTranslation}
+                     </p>
+                     <div className="p-4 bg-amber-900/10 rounded-lg border border-amber-900/30">
+                       <div className="flex items-center gap-2 mb-2">
+                          <TrendingUp size={16} className="text-amber-500" />
+                          <h5 className="text-sm font-bold text-amber-500 uppercase tracking-wider">Relevance to Photolithography</h5>
+                       </div>
+                       <p className="text-sm text-slate-400">
+                         {stages[activeStage].lithoRelevance}
+                       </p>
+                     </div>
+                  </div>
                 </div>
               </div>
 
+              {/* Next Step Button */}
+              {revealedStagesCount < stages.length && (
+                <div className="mt-8 text-center">
+                  <button
+                    onClick={handleNextStep}
+                    className="bg-amber-500 hover:bg-amber-400 text-slate-900 font-bold py-3 px-6 rounded-lg transition-all duration-300 flex items-center gap-2 mx-auto group"
+                  >
+                    Next Step
+                    <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
+                  </button>
+                </div>
+              )}
             </div>
           </div>
         </section>
