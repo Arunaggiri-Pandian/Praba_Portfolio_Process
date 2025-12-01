@@ -1,7 +1,7 @@
 import React from 'react';
 
-export type Tab = 'Home' | 'Experience' | 'Education' | 'Projects' | 'Skills' | 'Publications';
-const TABS: Tab[] = ['Home', 'Experience', 'Education', 'Projects', 'Skills', 'Publications'];
+export type Tab = 'Home' | 'My Journey' | 'Experience' | 'Education' | 'Projects' | 'Skills' | 'Publications';
+const TABS: Tab[] = ['Home', 'My Journey', 'Experience', 'Education', 'Projects', 'Skills', 'Publications'];
 
 interface NavigationProps {
     activeTab: Tab;

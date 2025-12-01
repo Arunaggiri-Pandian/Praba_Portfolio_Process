@@ -10,6 +10,7 @@ import Education from './components/sections/Education';
 import Projects from './components/sections/Projects';
 import Skills from './components/sections/Skills';
 import Publications from './components/sections/Publications';
+import Journey from './components/sections/Journey';
 import PasswordProtect from './components/PasswordProtect';
 
 const App: React.FC = () => {
@@ -76,6 +77,8 @@ const App: React.FC = () => {
     switch (activeTab) {
       case 'Home':
         return <Home setActiveTab={setActiveTab} />;
+      case 'My Journey':
+        return <Journey />;
       case 'Experience':
         return <Experience 
                   experience={experience} 
