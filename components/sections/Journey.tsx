@@ -9,11 +9,13 @@ import {
   CheckCircle2, 
   Search, 
   TrendingUp,
-  BarChart3,
   Zap,
   BookOpen,
   Disc,
-  Award
+  Award,
+  BarChart3,
+  BrainCircuit,
+  ShieldCheck
 } from 'lucide-react';
 
 // Custom Card Components for clean layout
@@ -413,23 +415,23 @@ const Journey = () => {
              </div>
 
              <div className="mt-10 flex justify-center gap-8">
-                <div className="flex flex-col items-center gap-2">
-                  <div className="w-12 h-12 bg-slate-800 rounded-full flex items-center justify-center border border-slate-600 text-green-400">
-                    <CheckCircle2 size={24} />
+                <div className="flex flex-col items-center gap-2 w-24 text-center">
+                  <div className="w-12 h-12 bg-slate-800 rounded-full flex items-center justify-center border border-slate-600 text-sky-400">
+                    <BarChart3 size={24} />
                   </div>
-                  <span className="text-sm font-medium text-slate-400">Data Ready</span>
+                  <span className="text-sm font-medium text-slate-400">Data Fluency</span>
                 </div>
-                <div className="flex flex-col items-center gap-2">
-                  <div className="w-12 h-12 bg-slate-800 rounded-full flex items-center justify-center border border-slate-600 text-green-400">
-                    <CheckCircle2 size={24} />
+                <div className="flex flex-col items-center gap-2 w-24 text-center">
+                  <div className="w-12 h-12 bg-slate-800 rounded-full flex items-center justify-center border border-slate-600 text-sky-400">
+                    <BrainCircuit size={24} />
                   </div>
-                  <span className="text-sm font-medium text-slate-400">Physics Ready</span>
+                  <span className="text-sm font-medium text-slate-400">Physical Intuition</span>
                 </div>
-                <div className="flex flex-col items-center gap-2">
-                  <div className="w-12 h-12 bg-slate-800 rounded-full flex items-center justify-center border border-slate-600 text-green-400">
-                    <CheckCircle2 size={24} />
+                <div className="flex flex-col items-center gap-2 w-24 text-center">
+                  <div className="w-12 h-12 bg-slate-800 rounded-full flex items-center justify-center border border-slate-600 text-sky-400">
+                    <ShieldCheck size={24} />
                   </div>
-                  <span className="text-sm font-medium text-slate-400">Fab Ready</span>
+                  <span className="text-sm font-medium text-slate-400">Process as the Product</span>
                 </div>
              </div>
           </div>
