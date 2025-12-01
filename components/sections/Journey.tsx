@@ -136,6 +136,7 @@ const Journey = () => {
   const [activeStage, setActiveStage] = useState(0);
   const [viewMode, setViewMode] = useState('narrative'); // 'narrative' or 'process'
   const [revealedStagesCount, setRevealedStagesCount] = useState(1);
+  const [isConclusionExpanded, setIsConclusionExpanded] = useState(false);
 
   const stages = [
     {
@@ -401,37 +402,53 @@ const Journey = () => {
 
         {/* Conclusion / CTA */}
         <section className="mt-20 border-t border-slate-800 pt-16">
-          <div className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-2xl p-8 md:p-12 border border-slate-700 text-center relative overflow-hidden">
+          <div className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-2xl border border-slate-700 relative overflow-hidden transition-all duration-500">
              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 via-amber-500 to-purple-500"></div>
              
-             <h2 className="text-3xl font-bold text-white mb-6">Why Process Engineering?</h2>
-             <div className="max-w-3xl mx-auto space-y-6 text-slate-300 text-lg">
-                <p>
-                  I realized a pattern: regardless of the domain, I always enjoyed the part where I <span className="text-amber-400">analyzed variation</span>, found the <span className="text-amber-400">root cause</span>, and converted raw data into <span className="text-amber-400">engineering decisions</span>.
-                </p>
-                <p>
-                  This journey has led me to a core conviction: that for an electrical engineer in a fab, the most important product we deliver is <span className="italic text-white">process stability</span>.
-                </p>
-             </div>
+             <button 
+                onClick={() => setIsConclusionExpanded(!isConclusionExpanded)}
+                className="w-full text-left p-8 md:p-12"
+              >
+                <div className="flex justify-between items-center">
+                  <h2 className="text-3xl font-bold text-white">Why Process Engineering?</h2>
+                  <ArrowRight 
+                    size={24} 
+                    className={`text-slate-400 transition-transform duration-300 ${isConclusionExpanded ? 'rotate-90' : 'rotate-0'}`} 
+                  />
+                </div>
+              </button>
 
-             <div className="mt-10 flex justify-center gap-8">
-                <div className="flex flex-col items-center gap-2 w-24 text-center">
-                  <div className="w-12 h-12 bg-slate-800 rounded-full flex items-center justify-center border border-slate-600 text-sky-400">
-                    <BarChart3 size={24} />
-                  </div>
-                  <span className="text-sm font-medium text-slate-400">Data Fluency</span>
-                </div>
-                <div className="flex flex-col items-center gap-2 w-24 text-center">
-                  <div className="w-12 h-12 bg-slate-800 rounded-full flex items-center justify-center border border-slate-600 text-sky-400">
-                    <BrainCircuit size={24} />
-                  </div>
-                  <span className="text-sm font-medium text-slate-400">Physical Intuition</span>
-                </div>
-                <div className="flex flex-col items-center gap-2 w-24 text-center">
-                  <div className="w-12 h-12 bg-slate-800 rounded-full flex items-center justify-center border border-slate-600 text-sky-400">
-                    <ShieldCheck size={24} />
-                  </div>
-                  <span className="text-sm font-medium text-slate-400">Process as the Product</span>
+             <div className={`transition-all duration-500 ease-in-out overflow-hidden ${isConclusionExpanded ? 'max-h-[500px]' : 'max-h-0'}`}>
+                <div className="px-8 md:px-12 pb-12 text-center">
+                   <div className="max-w-3xl mx-auto space-y-6 text-slate-300 text-lg">
+                      <p>
+                        I realized a pattern: regardless of the domain, I always enjoyed the part where I <span className="text-amber-400">analyzed variation</span>, found the <span className="text-amber-400">root cause</span>, and converted raw data into <span className="text-amber-400">engineering decisions</span>.
+                      </p>
+                      <p>
+                        This journey has led me to a core conviction: that for an electrical engineer in a fab, the most important product we deliver is <span className="italic text-white">process stability</span>.
+                      </p>
+                   </div>
+
+                   <div className="mt-10 flex justify-center gap-8">
+                      <div className="flex flex-col items-center gap-2 w-24 text-center">
+                        <div className="w-12 h-12 bg-slate-800 rounded-full flex items-center justify-center border border-slate-600 text-sky-400">
+                          <BarChart3 size={24} />
+                        </div>
+                        <span className="text-sm font-medium text-slate-400">Data Fluency</span>
+                      </div>
+                      <div className="flex flex-col items-center gap-2 w-24 text-center">
+                        <div className="w-12 h-12 bg-slate-800 rounded-full flex items-center justify-center border border-slate-600 text-sky-400">
+                          <BrainCircuit size={24} />
+                        </div>
+                        <span className="text-sm font-medium text-slate-400">Physical Intuition</span>
+                      </div>
+                      <div className="flex flex-col items-center gap-2 w-24 text-center">
+                        <div className="w-12 h-12 bg-slate-800 rounded-full flex items-center justify-center border border-slate-600 text-sky-400">
+                          <ShieldCheck size={24} />
+                        </div>
+                        <span className="text-sm font-medium text-slate-400">Process as the Product</span>
+                      </div>
+                   </div>
                 </div>
              </div>
           </div>
