@@ -17,6 +17,7 @@ export const RESUME_DATA: ResumeData = {
       dates: 'Jan 2025 – Dec 2026',
       location: 'Boise, ID',
       details: [
+        'Semiconductor Manufacturing',
         'CMOS Analog IC Design',
         'Memory-Centric Architecture',
         'Advanced Device Design and Simulation',
