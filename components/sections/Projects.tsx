@@ -19,7 +19,14 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => (
             <h3 className="text-xl font-bold text-light-text dark:text-dark-text">{project.title}</h3>
             <p className="text-sm font-mono text-light-accent dark:text-dark-accent my-2">{project.technologies}</p>
             <ul className="list-disc list-outside ml-5 mt-2 space-y-2 text-gray-600 dark:text-gray-400 text-sm">
-                {project.description.map((desc, i) => <li key={i}>{desc}</li>)}
+                {project.description.map((desc, i) => {
+                    const containsHtml = /<[a-z][\s\S]*>/i.test(desc);
+                    if (containsHtml) {
+                        return <li key={i} dangerouslySetInnerHTML={{ __html: desc }} />;
+                    } else {
+                        return <li key={i}>{desc}</li>;
+                    }
+                })}
             </ul>
         </div>
     </div>
