@@ -39,24 +39,31 @@ const Badge = ({ children, color = "blue" }) => {
 
 // SVG Wafer Map Component (Photolithography Specific)
 const WaferVisual = () => {
-  // Generate dies for the wafer map
-  const gridSize = 12;
-  const dies = [];
-  const centerX = gridSize / 2;
-  const centerY = gridSize / 2;
-  const radius = gridSize / 2;
+  const [dies, setDies] = useState([]);
 
-  for (let y = 0; y < gridSize; y++) {
-    for (let x = 0; x < gridSize; x++) {
-      // Check if die is within wafer circle
-      const dist = Math.sqrt(Math.pow(x - centerX + 0.5, 2) + Math.pow(y - centerY + 0.5, 2));
-      if (dist < radius - 0.5) {
-        // Randomly assign some as "defects" (red) to simulate the analysis aspect
-        const isDefect = Math.random() > 0.94;
-        dies.push({ x, y, isDefect });
+  useEffect(() => {
+    const gridSize = 12;
+    const generatedDies = [];
+    const centerX = gridSize / 2;
+    const centerY = gridSize / 2;
+    const radius = gridSize / 2;
+
+    for (let y = 0; y < gridSize; y++) {
+      for (let x = 0; x < gridSize; x++) {
+        const dist = Math.sqrt(Math.pow(x - centerX + 0.5, 2) + Math.pow(y - centerY + 0.5, 2));
+        let isDie = false;
+        let isDefect = false;
+
+        if (dist < radius - 0.5) {
+          isDie = true;
+          // Randomly assign some as "defects"
+          isDefect = Math.random() > 0.95;
+        }
+        generatedDies.push({ x, y, isDie, isDefect });
       }
     }
-  }
+    setDies(generatedDies);
+  }, []);
 
   return (
     <div className="w-full h-64 flex flex-col items-center justify-center relative">
@@ -66,23 +73,15 @@ const WaferVisual = () => {
           
           {/* Grid of Dies */}
           <div className="absolute inset-0 grid grid-cols-12 gap-[1px] p-1">
-             {/* We use a flattened mapping here for visual simplicity in grid */}
-             {Array.from({ length: 144 }).map((_, i) => {
-               const y = Math.floor(i / 12);
-               const x = i % 12;
-               const dist = Math.sqrt(Math.pow(x - centerX + 0.5, 2) + Math.pow(y - centerY + 0.5, 2));
-               
-               // Only render if inside circle
-               if (dist >= radius - 0.5) return <div key={i} className="bg-transparent" />;
-
-               const isDefect = (x * y * 7) % 23 === 0; // Deterministic pseudo-random for defects
+             {dies.map((die, i) => {
+               if (!die.isDie) return <div key={i} className="bg-transparent" />;
 
                return (
                  <div 
                    key={i} 
                    className={`
                      transition-all duration-700 hover:opacity-100
-                     ${isDefect 
+                     ${die.isDefect 
                        ? 'bg-red-500/80 animate-pulse' 
                        : 'bg-emerald-500/40 hover:bg-emerald-400 group-hover:bg-emerald-500/60'}
                    `}
@@ -96,7 +95,7 @@ const WaferVisual = () => {
         </div>
 
         {/* Flat/Notch (Orientation) */}
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-8 h-1 bg-slate-800 z-10 border-t border-slate-600"></div>
+        <div className="absolute bottom-0 left-12 w-8 h-1 bg-slate-800 z-10 border-t border-slate-600"></div>
       </div>
 
       <style>{`
