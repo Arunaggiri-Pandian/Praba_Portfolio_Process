@@ -140,7 +140,7 @@ const Journey = () => {
       skills: ["Device Physics", "Circuit Theory", "Semiconductors"],
       kpi: "Knowledge Acquisition",
       keyCompetency: "Fundamental Physics",
-      lithoRelevance: "This foundational knowledge is essential for understanding how photolithography CD (Critical Dimension) variations directly impact transistor performance and reliability."
+      lithoRelevance: "This provided the essential physics foundation to understand how photolithography outcomes, such as Critical Dimension (CD) control, directly impact transistor performance and reliability."
     },
     {
       id: 2,
@@ -153,7 +153,7 @@ const Journey = () => {
       skills: ["Root Cause Analysis", "Defect Correlation", "Trend Identification", "High-Volume Mfg"],
       kpi: "Defect Reduction",
       keyCompetency: "Systematic Root Cause Analysis",
-      lithoRelevance: "This role provided hands-on experience with systematic failure analysis, mirroring the defect troubleshooting and yield excursion response required in a photolithography module."
+      lithoRelevance: "This role offered direct experience in systematic failure analysis, a workflow that is directly applicable to troubleshooting yield excursions and investigating defect patterns in a photolithography module."
     },
     {
       id: 3,
@@ -166,7 +166,7 @@ const Journey = () => {
       skills: ["Python Scripting", "Big Data Handling", "Automation", "Dashboarding"],
       kpi: "Efficiency Improvement",
       keyCompetency: "Big Data Automation",
-      lithoRelevance: "This experience built my proficiency in handling massive datasets with Python, directly applicable to analyzing scanner logs and metrology data to maintain tight process control."
+      lithoRelevance: "This experience built my proficiency in handling large-scale datasets with Python, a skill set that is crucial for analyzing scanner logs and metrology data to maintain tight process control."
     },
     {
       id: 4,
@@ -179,7 +179,7 @@ const Journey = () => {
       skills: ["Lithography Basics", "Process Integration", "Simulation Analysis", "Distribution Analysis"],
       kpi: "Process Capability",
       keyCompetency: "Applied Process Theory",
-      lithoRelevance: "My graduate studies connected process theory with data analysis, enabling me to use computational tools to define process windows and characterize variability—core skills for a lithography engineer."
+      lithoRelevance: "My graduate studies synthesized process theory with data analysis, equipping me with the ability to use computational tools to define process windows and characterize variability—core skills for a lithography engineer."
     }
   ];
 
