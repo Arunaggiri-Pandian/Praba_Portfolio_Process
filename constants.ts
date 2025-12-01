@@ -37,28 +37,33 @@ export const RESUME_DATA: ResumeData = {
     },
   ],
   skills: {
-    'Hardware Description and Verification': ['Verilog', 'SystemVerilog', 'UVM'],
-    'Programming Languages': ['Python', 'C++', 'MATLAB'],
-    'Simulation and EDA Tools': [
+    'Semiconductor Process & Device Physics': [
+      'CMOS & FinFET Fabrication Principles',
+      'Photolithography & Etching Concepts',
+      'Semiconductor Device Physics',
+      'Physical Design (Layout)',
+      'Design Rule Checking (DRC)',
+    ],
+    'Data Analysis & Process Control': [
+      'Python (NumPy, Pandas, Matplotlib)',
+      'Statistical Process Control (SPC)',
+      'Yield Analysis',
+      'MATLAB',
+      'SQL',
+    ],
+    'Characterization & Simulation Tools': [
       'Cadence Virtuoso',
       'Spectre',
-      'ModelSim',
-      'Synopsys Design Compiler',
-      'Quartus',
-      'Xilinx Vivado',
       'COMSOL',
+      'Synopsys TCAD (Conceptual)',
     ],
-    'AI/ML': [
-      'PyTorch',
-      'TensorFlow',
-      'Scikit-learn',
-      'NumPy',
-      'Pandas',
-      'Matplotlib',
-      'Seaborn',
-      'Plotly',
+    'Hardware Design & Verification': [
+      'Verilog', 
+      'SystemVerilog', 
+      'Xilinx Vivado',
+      'ModelSim'
     ],
-    'Software Development': ['React', 'Streamlit', 'PostgreSQL', 'MySQL', 'MongoDB', 'Git', 'Linux'],
+    'General Software & OS': ['Git', 'Linux', 'React', 'Streamlit'],
   },
   experience: [
     {

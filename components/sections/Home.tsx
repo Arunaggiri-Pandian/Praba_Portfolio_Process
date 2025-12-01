@@ -42,13 +42,13 @@ const Home: React.FC<{ setActiveTab: (tab: Tab) => void }> = ({ setActiveTab }) 
           </div>
           <div className="text-gray-600 dark:text-gray-400 space-y-4 text-justify">
             <p>
-              I am a highly motivated and results-oriented engineer with a Master's degree in Electrical and Computer Engineering from Boise State University. My academic background and professional experience have provided me with a strong foundation in both software development and hardware design.
+              I am a semiconductor professional with a Master’s degree in Electrical and Computer Engineering from Boise State University, driven by a profound interest in the entire silicon lifecycle, from physical design to high-volume manufacturing. My goal is to apply my foundational knowledge in VLSI and my analytical skills to solve complex challenges in semiconductor process engineering, specifically within photolithography.
             </p>
             <p>
-              As a Software Engineer at Dish Network, I honed my skills in backend development, optimizing services for the Sling streaming platform using Python and Django. I have a proven track record of improving system performance, having reduced server response times by 25% and API latency by 20%. I am also proficient in modern DevOps practices, including CI/CD with Jenkins and containerization with Docker and Kubernetes.
+              During my time at Dish Network, I developed a strong skillset in process automation and data analysis, using Python and Django to optimize large-scale backend services. I am adept at identifying process bottlenecks and implementing robust software solutions to improve system efficiency and reliability—skills I am eager to apply to the vast datasets and automated systems used in a modern wafer fab for process control and yield enhancement.
             </p>
             <p>
-              My passion for hardware is demonstrated through my internship at Delta Electronics and extensive academic projects in areas like low-noise neural amplifier design, DRAM-based in-memory accelerators, and AXI-based peripheral design and verification using Verilog and SystemVerilog. I am well-versed in a variety of EDA tools and simulation environments. I am eager to leverage my diverse skill set to tackle challenging problems at the intersection of hardware and software.
+              My passion for the physical side of semiconductor technology is demonstrated through my internship at Delta Electronics and extensive academic projects. My work on low-noise neural amplifiers and DRAM-based accelerators required a deep understanding of physical layout, process constraints (DRC), and the critical impact of layout on device performance and manufacturability. I am well-versed in EDA tools and am driven to leverage this design-level perspective to innovate and optimize fabrication processes at the heart of semiconductor manufacturing.
             </p>
           </div>
         </div>
