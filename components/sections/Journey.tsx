@@ -15,7 +15,8 @@ import {
   Award,
   BarChart3,
   BrainCircuit,
-  ShieldCheck
+  ShieldCheck,
+  RefreshCw
 } from 'lucide-react';
 
 // Custom Card Components for clean layout
@@ -202,6 +203,12 @@ const Journey = () => {
     }
   };
 
+  const handleReset = () => {
+    setRevealedStagesCount(1);
+    setActiveStage(0);
+    setViewMode('narrative');
+  };
+
   return (
     <div className="min-h-screen bg-slate-950 text-slate-200 font-sans selection:bg-amber-500/30">
       
@@ -384,9 +391,9 @@ const Journey = () => {
                 </div>
               </div>
 
-              {/* Next Step Button */}
-              {revealedStagesCount < stages.length && (
-                <div className="mt-8 text-center">
+              {/* Button Container */}
+              <div className="mt-8 text-center">
+                {revealedStagesCount < stages.length ? (
                   <button
                     onClick={handleNextStep}
                     className="bg-amber-500 hover:bg-amber-400 text-slate-900 font-bold py-3 px-6 rounded-lg transition-all duration-300 flex items-center gap-2 mx-auto group"
@@ -394,8 +401,16 @@ const Journey = () => {
                     Next Step
                     <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
                   </button>
-                </div>
-              )}
+                ) : (
+                  <button
+                    onClick={handleReset}
+                    className="bg-sky-500 hover:bg-sky-400 text-slate-900 font-bold py-3 px-6 rounded-lg transition-all duration-300 flex items-center gap-2 mx-auto group"
+                  >
+                    Reset Journey
+                    <RefreshCw size={18} className="transition-transform group-hover:rotate-180" />
+                  </button>
+                )}
+              </div>
             </div>
           </div>
         </section>
