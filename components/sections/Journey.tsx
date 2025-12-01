@@ -188,6 +188,7 @@ const Journey = () => {
       const nextStageIndex = revealedStagesCount;
       setRevealedStagesCount(revealedStagesCount + 1);
       setActiveStage(nextStageIndex);
+      setViewMode('narrative');
     }
   };
 
