@@ -238,29 +238,29 @@ export const RESUME_DATA: ResumeData = {
   ],
   interests: [
     {
+      title: 'Semiconductor Manufacturing',
+      icon: '/icons/semiconductor_manufacturing.png',
+      description: "I am fascinated by the entire silicon fabrication lifecycle, from front-end-of-line (FEOL) processes like lithography and etch that build the transistor, to back-end-of-line (BEOL) metallization that connects everything. My focus is on how these intricate steps integrate to create reliable and high-performance devices."
+    },
+    {
       title: 'Data-Driven Process Optimization',
-      icon: '/op-amp-icon.png',
+      icon: '/icons/data_optimization.png',
       description: "I am passionate about leveraging data to drive manufacturing excellence. My focus is on applying statistical methods like SPC and designing experiments (DoE) to analyze process data, identify trends, and provide actionable insights for yield enhancement."
     },
     {
       title: 'Root Cause Analysis',
-      icon: '/waveform-icon.png',
+      icon: '/icons/root_cause_analysis.png',
       description: "I enjoy the systematic challenge of troubleshooting process deviations. My background in design verification has equipped me with a methodical mindset for investigating defect sources, analyzing failure data, and implementing robust corrective actions."
     },
     {
       title: 'Semiconductor Device Physics',
-      icon: '/dram-icon.png',
+      icon: '/icons/device_physics.png',
       description: "I am fascinated by the link between fabrication processes and the final electronic properties of a device. My focus is on understanding how lithography, etching, and deposition fundamentally define the performance and reliability of transistors."
     },
     {
-      title: 'Design for Manufacturability',
-      icon: '/physical-design-icon.png',
-      description: "My passion is bridging the critical gap between chip design and high-volume fabrication. I am focused on understanding how layout choices, design rules (DRC), and resolution enhancement techniques (RET) directly impact a design’s yield and robustness."
-    },
-    {
       title: 'Process Integration',
-      icon: '/iot-icon.png',
-      description: "I am interested in the complete manufacturing flow, from wafer start to final test. My focus is on how different process modules interact and how to optimize the entire sequence to build reliable, high-performance integrated circuits."
+      icon: '/icons/process_integration.png',
+      description: "I am interested in the complete manufacturing flow, from wafer start to final test. My focus is on how different process modules interact and and how to optimize the entire sequence to build reliable, high-performance integrated circuits."
     }
   ],
   hobbies: [
