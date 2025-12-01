@@ -33,7 +33,14 @@ export const RESUME_DATA: ResumeData = {
       gpa: '3.6/4.0',
       dates: 'Aug 2018 – Jun 2022',
       location: 'Tamil Nadu, India',
-      details: [],
+      details: [
+        '<strong>Relevant Coursework:</strong>',
+        '<strong>Semiconductor Physics & Devices:</strong> Semiconductor Physics, VLSI Device Modeling, CMOS VLSI Systems.',
+        '<strong>Process Control & Optimization:</strong> Control Systems, Optimization Methods, Project Management.',
+        '<strong>Imaging & Signal Processing:</strong> Digital Image Processing, Signals and Systems.',
+        '<strong>Applied Sciences:</strong> Chemistry, Physics, Laboratory Methods.',
+        '<strong>Data Analysis & Computation:</strong> Machine Learning, Deep Learning, Applied Mathematics.',
+      ],
       logo: '/Anna_University_Logo.png'
     },
   ],
