@@ -41,7 +41,7 @@ const Badge = ({ children, color = "blue" }) => {
 const WaferVisual = () => {
   const [dies, setDies] = useState([]);
 
-  useEffect(() => {
+  const generateDefects = () => {
     const gridSize = 12;
     const generatedDies = [];
     const centerX = gridSize / 2;
@@ -63,6 +63,13 @@ const WaferVisual = () => {
       }
     }
     setDies(generatedDies);
+  };
+
+  useEffect(() => {
+    generateDefects(); // Generate once on mount
+    const interval = setInterval(generateDefects, 3000); // Regenerate every 3 seconds to match animation
+
+    return () => clearInterval(interval); // Cleanup interval on unmount
   }, []);
 
   return (
