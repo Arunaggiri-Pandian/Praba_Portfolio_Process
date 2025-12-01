@@ -227,12 +227,12 @@ const Journey = () => {
               <span>STATUS: READY FOR FAB</span>
             </div>
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
-              Bridging the gap between <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Data</span> and <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-400">Process Physics</span>.
+              Turning <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Process Data</span> into <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-400">Manufacturing Excellence</span>.
             </h1>
             <p className="text-slate-400 text-lg mb-8 leading-relaxed">
-              My journey hasn't just been about learning engineering; it's been about mastering the loop of 
+              My engineering philosophy is built on the essential loop of 
               <span className="text-white font-semibold"> Analysis ➔ Root Cause ➔ Action</span>. 
-              I am applying for this role because I don't just see wafers; I see data distributions waiting to be optimized.
+              This has trained me to see a finished wafer not as a static product, but as a final dataset—a distribution of outcomes ready to be analyzed, understood, and continuously improved.
             </p>
             <div className="flex gap-4">
                <button 
