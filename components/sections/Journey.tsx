@@ -95,7 +95,7 @@ const WaferVisual = () => {
         </div>
 
         {/* Flat/Notch (Orientation) */}
-        <div className="absolute bottom-0 left-12 w-8 h-1 bg-slate-800 z-10 border-t border-slate-600"></div>
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-8 h-1 bg-slate-800 z-10 border-t border-slate-600"></div>
       </div>
 
       <style>{`
