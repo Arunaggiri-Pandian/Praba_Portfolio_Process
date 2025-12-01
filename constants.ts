@@ -238,29 +238,29 @@ export const RESUME_DATA: ResumeData = {
   ],
   interests: [
     {
-      title: 'Analog & Mixed-Signal IC Design',
+      title: 'Data-Driven Process Optimization',
       icon: '/op-amp-icon.png',
-      description: "I am passionate about the art of crafting high-performance analog circuits from the transistor level up. My work on a low-noise neural amplifier highlights my interest in designing for high sensitivity and ultra-low power, pushing the boundaries of what's possible in biomedical and sensor applications."
+      description: "I am passionate about leveraging data to drive manufacturing excellence. My focus is on applying statistical methods like SPC and designing experiments (DoE) to analyze process data, identify trends, and provide actionable insights for yield enhancement."
     },
     {
-      title: 'Digital Design & Verification',
+      title: 'Root Cause Analysis',
       icon: '/waveform-icon.png',
-      description: "I enjoy the structured process of building and validating complex digital systems. Designing an AXI-based peripheral and creating a comprehensive UVM testbench for it solidified my appreciation for rigorous verification methodologies that ensure robust, error-free hardware."
+      description: "I enjoy the systematic challenge of troubleshooting process deviations. My background in design verification has equipped me with a methodical mindset for investigating defect sources, analyzing failure data, and implementing robust corrective actions."
     },
     {
-      title: 'Next-Generation Memory Architectures',
+      title: 'Semiconductor Device Physics',
       icon: '/dram-icon.png',
-      description: "Exploring architectures that challenge the traditional separation of memory and compute is a key interest. My project on a DRAM-based in-memory accelerator was a fascinating dive into how near-data processing can overcome performance bottlenecks for emerging AI workloads."
+      description: "I am fascinated by the link between fabrication processes and the final electronic properties of a device. My focus is on understanding how lithography, etching, and deposition fundamentally define the performance and reliability of transistors."
     },
     {
-      title: 'Physical Design & VLSI',
+      title: 'Design for Manufacturability',
       icon: '/physical-design-icon.png',
-      description: "I have a strong interest in the complete chip design flow, from RTL to GDSII. I am passionate about the challenges of floorplanning, routing, and timing closure to create efficient and robust integrated circuits."
+      description: "My passion is bridging the critical gap between chip design and high-volume fabrication. I am focused on understanding how layout choices, design rules (DRC), and resolution enhancement techniques (RET) directly impact a design’s yield and robustness."
     },
     {
-      title: 'Embedded Systems & IoT',
+      title: 'Process Integration',
       icon: '/iot-icon.png',
-      description: "I enjoy building intelligent devices that interact with the physical world. My focus is on designing and programming microcontrollers for IoT applications, creating efficient and reliable systems that bridge the gap between hardware and software."
+      description: "I am interested in the complete manufacturing flow, from wafer start to final test. My focus is on how different process modules interact and how to optimize the entire sequence to build reliable, high-performance integrated circuits."
     }
   ],
   hobbies: [
