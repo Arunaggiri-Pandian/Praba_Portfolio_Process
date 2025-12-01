@@ -401,8 +401,7 @@ const Journey = () => {
                   I realized a pattern: regardless of the domain, I always enjoyed the part where I <span className="text-amber-400">analyzed variation</span>, found the <span className="text-amber-400">root cause</span>, and converted raw data into <span className="text-amber-400">engineering decisions</span>.
                 </p>
                 <p>
-                  I'm not just an electrical engineer; I am an engineer who understands that 
-                  <span className="italic text-white"> process stability is the product</span>.
+                  This journey has led me to a core conviction: that for an electrical engineer in a fab, the most important product we deliver is <span className="italic text-white">process stability</span>.
                 </p>
              </div>
 
