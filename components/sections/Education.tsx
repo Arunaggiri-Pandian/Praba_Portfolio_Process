@@ -26,18 +26,31 @@ const EducationCard: React.FC<{ item: EducationType }> = ({ item }) => {
                         <p>{item.location}</p>
                     </div>
                     
-                    {item.details.length > 0 && (
-                        <div className="mt-4">
-                            <h4 className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">Relevant Coursework</h4>
-                            <div className="flex flex-wrap gap-2">
-                                {item.details.map((detail, index) => (
-                                    <span key={index} className="bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-300 text-xs font-medium px-2.5 py-1 rounded-full">
-                                        {detail}
-                                    </span>
-                                ))}
-                            </div>
-                        </div>
-                    )}
+                    {item.details.length > 0 && (() => {
+                        const containsHtml = item.details.some(detail => /<[a-z][\s\S]*>/i.test(detail));
+                        if (containsHtml) {
+                            return (
+                                <div className="mt-4 text-sm text-gray-600 dark:text-gray-400 space-y-1">
+                                    {item.details.map((detail, index) => (
+                                        <p key={index} dangerouslySetInnerHTML={{ __html: detail }} />
+                                    ))}
+                                </div>
+                            );
+                        } else {
+                            return (
+                                <div className="mt-4">
+                                    <h4 className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">Relevant Coursework</h4>
+                                    <div className="flex flex-wrap gap-2">
+                                        {item.details.map((detail, index) => (
+                                            <span key={index} className="bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-300 text-xs font-medium px-2.5 py-1 rounded-full">
+                                                {detail}
+                                            </span>
+                                        ))}
+                                    </div>
+                                </div>
+                            );
+                        }
+                    })()}
 
                     {item.certificate && (
                         <div className="mt-4 flex items-center gap-3 group">
